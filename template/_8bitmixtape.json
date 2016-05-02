@@ -10,7 +10,10 @@
 			},
 			"platforms" : [
 				${_platforms}
+			],
+			"tools" : [
+			   
+				    ]
+				  }
 			]
-        }
-    ]
 }
