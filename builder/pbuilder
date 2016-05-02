@@ -276,13 +276,15 @@ function update_release_repo() #repo url, dir, specific commit
 	local _REPO_LOCAL_DIR=${2}
 	local _COMMIT_HASH=${3}
 	
-	if [ -d "${_REPO_LOCAL_DIR}" ] #if directory exists
+	if [ -d "${STAGING_DIR}/${_REPO_LOCAL_DIR}" ] #if directory exists
 	then
 		cd "${cwd}/${_REPO_LOCAL_DIR}"
 		git reset --hard ${_COMMIT_HASH}
 		git submodule update --init --recursive
 		git submodule foreach --recursive git clean -d -f -f
 	else
+		mkdir -p "${_REPO_LOCAL_DIR}"
+		echo ${_REPO_REMOTE_URL}
 		git clone "${_REPO_REMOTE_URL}" "${_REPO_LOCAL_DIR}"
 		cd "${_REPO_LOCAL_DIR}"
 		git checkout ${_COMMIT_HASH}
