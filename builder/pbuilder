@@ -126,7 +126,6 @@ function generate_package_template() #platforms
 	then
 		eval "cat <<EOF
 		$(<./${TEMPLATE_DIR}/${_template}${TEMPLATE_EXTENSION})
-		EOF
 		" 2> /dev/null
 	else
 		default_package_template
