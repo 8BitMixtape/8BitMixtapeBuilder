@@ -595,7 +595,7 @@ function ADD_TOOLS()
 	eval "${_new_var}+=(${_system},${_file})"
 }
 
-function ADD_BOARD_LIST()
+function BOARD_LIST_ADD()
 {
 	BOARD_LIST+=("${1}")
 }
