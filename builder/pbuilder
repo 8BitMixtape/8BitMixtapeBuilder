@@ -894,8 +894,6 @@ done
 # echo "test"
 check_config_exists "./${DEFAULT_CONFIG_FILE}"
 
-# generate_tools_deps_template Digistump_SAM
-
 
 cat << "asciiart"
                           (   (       )         
@@ -927,10 +925,3 @@ cat << "asciiart"
 *--------------------------------------------------*
 
 asciiart
-
-
-# echo $wew
-#generate_tools_template
-#make_packages
-
-#generate_boards_template BOARD_LIST
