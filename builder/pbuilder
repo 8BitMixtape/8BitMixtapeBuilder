@@ -924,4 +924,13 @@ cat << "asciiart"
 |push     - sync build tools                       |
 *--------------------------------------------------*
 
+First time using build script:
+
+1. build initpage
+2. build build
+3. build publish
+
+
+*--------------------------------------------------*
+
 asciiart
