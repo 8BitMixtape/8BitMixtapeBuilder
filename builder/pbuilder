@@ -726,7 +726,13 @@ function make_packages()
 		fi
 	done
 
-	local json_package_output=`generate_package_template "${platform_list}"`
+	if  check_file_exists "${TEMPLATE_DIR}/${BOARD_NAME}${TEMPLATE_EXTENSION}"
+	then
+		local json_package_output=`generate_package_template "${platform_list}" "${BOARD_NAME}"`
+	else
+		local json_package_output=`generate_package_template "${platform_list}"`
+	fi	
+
 	echo "${json_package_output}" > "${RELEASES_DIR}/${RELEASE_REPO_DIR}/${RELEASE_INDEX_JSON_FILENAME}"
 }
 
